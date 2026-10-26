@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-theme="light" data-motion="full">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Translate-My-Pay — Financial quietude for irregular lives</title>
+  <meta name="description" content="Translate-My-Pay: the freelance & student income stabilizer. Bills locked first, then one calm number — what you can safely spend today." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/landing.css" />
+  <link rel="stylesheet" href="css/workspace.css" />
+
+  <!-- Restore saved theme / motion choice before first paint (storage may be unavailable on file://) -->
+  <script>
+    try {
+      if (localStorage.getItem('tmp-theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      if (localStorage.getItem('tmp-motion') === 'calm') document.documentElement.setAttribute('data-motion', 'calm');
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div id="root"><div class="boot" role="status">Loading Translate-My-Pay…</div></div>
+  <noscript><div class="boot">Translate-My-Pay needs JavaScript to run its money engine.</div></noscript>
+
+  <!-- Libraries (plain UMD builds — no Babel, no build step) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/framer-motion@11.11.17/dist/framer-motion.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+
+  <!-- App (load order matters: engine → presets → app) -->
+  <script src="js/engine.js"></script>
+  <script src="js/presets.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
